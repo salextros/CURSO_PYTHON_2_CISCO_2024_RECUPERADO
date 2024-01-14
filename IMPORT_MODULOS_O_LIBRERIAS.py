@@ -209,6 +209,13 @@ import MODULOS_SAMIR
 
 print(MODULOS_SAMIR.OperacionM(5,10,20))
 
+print("")
+########################################################################## 
+print("CREO_QUE_LO_ARREGLE")
+
+
+
+
 
  
 
