@@ -341,6 +341,146 @@ try:
     file.close()
 except IOError as e:
     print("Se produjo un error de E/S: ", strerror(e.errno))
+print()
+print()
+
+############################################################################
+
+from os import strerror
+
+data = bytearray(10)
+
+try:
+    binary_file = open('file.bin', 'rb')
+    binary_file.readinto(data)
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+except IOError as e:
+    print("Se produjo un error de E/S:", strerror(e.errno))
+print()
+print()
+
+###############################################################################
+
+from os import strerror
+
+try:
+    binary_file = open('file.bin', 'rb')
+    data = bytearray(binary_file.read())
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+
+except IOError as e:
+    print("Se produjo un error de E/S:", strerror(e.errno))
+print()
+print()
+
+####################################################################################
+
+from os import strerror
+
+try:
+    binary_file = open('file.bin', 'rb')
+    data = bytearray(binary_file.read(5))
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+
+except IOError as e:
+    print("Se produjo un error de E/S:", strerror(e.errno))
+print()
+print()
+
+#######################################################################################
+
+import platform
+print(platform.uname())
+print()
+print()
+
+########################################################################################
+
+from datetime import date
+
+today = date.today()
+
+print("Hoy:", today)
+print("Año:", today.year)
+print("Mes:", today.month)
+print("Día:", today.day)
+print()
+print()
+
+###########################################################################
+
+from datetime import date
+
+my_date = date(2019, 11, 4)
+print(my_date)
+print()
+print()
+
+###########################################################################
+from datetime import date
+import time
+
+timestamp = time.time()
+print("Marca de tiempo:", timestamp)
+
+d = date.fromtimestamp(timestamp)
+print("Fecha:", d)
+print()
+print()
+
+###########################################################################
+from datetime import time
+
+t = time(14, 53, 20, 1)
+
+print("Tiempo:", t)
+print("Hora:", t.hour)
+print("Minutos:", t.minute)
+print("Segundos:", t.second)
+print("Microsegundo:", t.microsecond)
+print()
+print()
+
+###########################################################################
+
+import time
+print(time.ctime())
+print()
+print()
+
+###########################################################################
+
+from datetime import datetime
+
+print("hoy:", datetime.today())
+print("ahora:", datetime.now())
+print("utc_ahora:", datetime.utcnow())
+print()
+print()
+
+###########################################################################
+
+import time
+print(time.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+print()
+print()
+
+###########################################################################
+
+
+
+    
+    
+
 
 
 
